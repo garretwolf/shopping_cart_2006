@@ -10,4 +10,11 @@ attr_reader :name, :capacity, :products
   def add_product(product)
     @products << product
   end
+
+  def details
+    {
+      name: @name,
+      capacity: @capacity
+    }
+  end
 end
