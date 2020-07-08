@@ -5,6 +5,7 @@ attr_reader :name, :capacity, :products
     @name = name
     @capacity = capacity.delete("items").to_i
     @products = []
+    @number_of_products = 0
   end
 
   def add_product(product)
@@ -17,4 +18,11 @@ attr_reader :name, :capacity, :products
       capacity: @capacity
     }
   end
-end
+
+  def total_number_of_products
+    @products.each do |product|
+      @number_of_products += product.quantity
+    end
+    @number_of_products
+  end
+  end
