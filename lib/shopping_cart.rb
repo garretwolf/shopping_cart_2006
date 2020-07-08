@@ -25,4 +25,12 @@ attr_reader :name, :capacity, :products
     end
     @number_of_products
   end
+
+  def is_full?
+    if total_number_of_products > @capacity
+      return true
+    else
+      return false
+    end
+  end
   end
