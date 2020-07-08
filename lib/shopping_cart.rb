@@ -6,4 +6,8 @@ attr_reader :name, :capacity, :products
     @capacity = capacity.delete("items").to_i
     @products = []
   end
+
+  def add_product(product)
+    @products << product
+  end
 end
