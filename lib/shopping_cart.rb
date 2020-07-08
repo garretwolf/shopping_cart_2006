@@ -33,4 +33,10 @@ attr_reader :name, :capacity, :products
       return false
     end
   end
+# Did not finish this method
+  def products_by_category(category)
+    @products.find_all do |product|
+      product.category == category
+    end
+  end
   end
